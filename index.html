@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivam Rai | UX Designer Portfolio</title>
+    <link rel="icon" type="image/png" href="Icon/Logo.png">
     <!-- Google Fonts for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Electrolize&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Electrolize&display=swap"
+        rel="stylesheet">
     <!-- Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Three.js library for 3D rendering -->
@@ -19,739 +22,9 @@
     <!-- GSAP for advanced animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <style>
-        /* Base styles for our dark, aesthetic theme */
-        :root {
-            --primary-neon: #9f7aea; /* A softer, more elegant violet */
-            --secondary-neon: #38b2ac; /* A vibrant teal */
-            --bg-dark: #12121c; /* A slightly darker charcoal gray */
-            --bg-light: #1e1e2c; /* A lighter gray for cards */
-            --text-light: #e2e8f0;
-            --text-dark: #a0aec0;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            overflow-x: hidden;
-            cursor: none; /* Hide default cursor */
-        }
-
-        /* NEW: Grain Overlay */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXVpaWl9fX1dbW1bW1t/f39wcHDBwcGjo6NsbGxoaGjAwMCqqqqRkZEOCgxFSUlsbGysoKGTk5MoKCh7e3uvr68fHx8XFxf/s8lpAAAAAnRSTlMAAHaTzP8AAAAdSURBVDjL7c0BCQAwDMCg6/is/zJgDoKSt3Zz8z4AcEwA9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A8A9A/s8lpAAAAAElFTkSuQmCC');
-            z-index: 9997;
-            pointer-events: none;
-            opacity: 0.05;
-            animation: grain 8s steps(10) infinite;
-        }
-        @keyframes grain {
-          0%, 100% { transform: translate(0, 0); }
-          10% { transform: translate(-5%, -10%); }
-          20% { transform: translate(-15%, 5%); }
-          30% { transform: translate(7%, -25%); }
-          40% { transform: translate(-5%, 25%); }
-          50% { transform: translate(-15%, 10%); }
-          60% { transform: translate(15%, 0%); }
-          70% { transform: translate(0%, 15%); }
-          80% { transform: translate(3%, 35%); }
-          90% { transform: translate(-10%, 10%); }
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-neon);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary-neon);
-        }
-
-        /* --- Dynamic Aura --- */
-        .aura {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--primary-neon), transparent 60%);
-            filter: blur(80px);
-            opacity: 0.2;
-            pointer-events: none;
-            z-index: 9998; /* Below cursor, above content */
-            transform: translate(-50%, -50%);
-            transition: top 0.1s ease-out, left 0.1s ease-out;
-        }
-
-        /* Custom cursor styles */
-        .custom-cursor {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 8px;
-            background-color: var(--primary-neon);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-        }
-        
-        .cursor-follower {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 30px;
-            height: 30px;
-            border: 2px solid var(--secondary-neon);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: top 0.1s ease-out, left 0.1s ease-out, width 0.3s ease, height 0.3s ease;
-        }
-
-        /* Cursor hover effects */
-        a:hover ~ .custom-cursor, button:hover ~ .custom-cursor, .interactive-card:hover ~ .custom-cursor, .skill-icon-container:hover ~ .custom-cursor, input:hover ~ .custom-cursor, textarea:hover ~ .custom-cursor, .social-icon:hover ~ .custom-cursor {
-            width: 30px;
-            height: 30px;
-            background-color: rgba(56, 178, 172, 0.5);
-        }
-        
-        a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .interactive-card:hover ~ .cursor-follower, .skill-icon-container:hover ~ .cursor-follower, input:hover ~ .cursor-follower, textarea:hover ~ .cursor-follower, .social-icon:hover ~ .cursor-follower {
-            width: 50px;
-            height: 50px;
-        }
-
-        /* Navbar specific styles with glass effect */
-        .glass-effect {
-            background-color: rgba(18, 18, 28, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Neon glow for text */
-        .neon-text {
-            text-shadow: 0 0 8px var(--primary-neon), 0 0 16px var(--primary-neon), 0 0 32px var(--secondary-neon);
-            transition: text-shadow 0.3s ease-in-out;
-            font-family: 'Electrolize', sans-serif;
-        }
-        
-        .neon-text:hover {
-            text-shadow: 0 0 12px var(--primary-neon), 0 0 24px var(--primary-neon), 0 0 48px var(--secondary-neon);
-        }
-
-        /* Subtle pulsing animation for the name */
-        @keyframes pulse-neon {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.02); opacity: 0.9; }
-        }
-
-        #name {
-            animation: pulse-neon 5s infinite ease-in-out;
-        }
-
-        /* Card hover effect - Glowing Border Trace */
-        .interactive-card {
-            position: relative;
-            background-color: var(--bg-light);
-            border: 1px solid transparent;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .interactive-card .card-content {
-            transition: transform 0.3s ease;
-        }
-        .interactive-card:hover {
-            transform: scale(1.03);
-        }
-        .interactive-card:hover .card-content {
-            transform: scale(0.98);
-        }
-        .interactive-card::before, .interactive-card::after {
-            content: '';
-            position: absolute;
-            background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
-            transition: all 0.4s ease;
-        }
-        .interactive-card::before {
-            width: 0; height: 2px;
-            top: 0; left: 0;
-        }
-        .interactive-card::after {
-            width: 2px; height: 0;
-            top: 0; right: 0;
-        }
-        .card-content::before, .card-content::after {
-            content: '';
-            position: absolute;
-            background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
-            transition: all 0.4s ease;
-        }
-        .card-content::before {
-            width: 0; height: 2px;
-            bottom: 0; right: 0;
-        }
-        .card-content::after {
-            width: 2px; height: 0;
-            bottom: 0; left: 0;
-        }
-        .interactive-card:hover::before, .interactive-card:hover .card-content::before {
-            width: 100%;
-        }
-        .interactive-card:hover::after, .interactive-card:hover .card-content::after {
-            height: 100%;
-        }
-        
-        .card-content {
-            position: relative;
-            z-index: 2;
-            background-color: var(--bg-light);
-            height: 100%;
-            width: 100%;
-            border-radius: 0.5rem;
-        }
-
-        /* Floating bubble background */
-        .bubbles-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -9;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .bubble {
-            position: absolute;
-            background: rgba(159, 122, 234, 0.15);
-            border-radius: 50%;
-            animation: float-bubbles 20s linear infinite;
-            filter: blur(35px);
-            opacity: 0.8;
-        }
-        
-        .bubble:nth-child(1) { width: 150px; height: 150px; top: 100%; left: 5%; animation-duration: 25s; animation-delay: 2s; }
-        .bubble:nth-child(2) { width: 120px; height: 120px; top: 100%; right: 10%; background: rgba(56, 178, 172, 0.15); animation-duration: 20s; animation-delay: 4s; }
-        .bubble:nth-child(3) { width: 90px; height: 90px; top: 100%; left: 25%; animation-duration: 22s; animation-delay: 1s; }
-        .bubble:nth-child(4) { width: 180px; height: 180px; top: 100%; right: 20%; animation-duration: 30s; animation-delay: 6s; }
-        .bubble:nth-child(5) { width: 100px; height: 100px; top: 100%; left: 45%; background: rgba(159, 122, 234, 0.15); animation-duration: 18s; animation-delay: 3s; }
-        .bubble:nth-child(6) { width: 200px; height: 200px; top: 100%; left: 0%; animation-duration: 28s; animation-delay: 7s; }
-
-        @keyframes float-bubbles {
-            0% { transform: translateY(0); opacity: 0.8; }
-            100% { transform: translateY(-100vh); opacity: 0; }
-        }
-        
-        #hero-3d-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: -10;
-        }
-
-        /* REMOVED: Blurred background from sections */
-        main > section:not(#hero), footer {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .project-preview {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 10;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        .interactive-card:hover .project-preview {
-            display: block;
-            opacity: 1;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.5rem;
-        }
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -39px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            background: var(--bg-dark);
-            border: 3px solid var(--secondary-neon);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--secondary-neon);
-            transition: all 0.3s ease;
-        }
-        .timeline-item:hover::before {
-            transform: scale(1.2);
-            box-shadow: 0 0 20px var(--secondary-neon);
-        }
-        
-        /* NEW: Timeline Spotlight Effect */
-        #timeline-spotlight {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--secondary-neon), transparent 60%);
-            filter: blur(80px);
-            opacity: 0.25;
-            pointer-events: none;
-            z-index: -1;
-            transform: translate(-50%, -50%);
-        }
-        
-        /* --- Testimonial Carousel Styles --- */
-        #testimonial-carousel-container {
-            position: relative;
-            width: 100%;
-            height: 400px; /* Increased height */
-            perspective: 1500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .testimonial-slide {
-            position: absolute;
-            width: 60%; /* Adjusted width for better visibility */
-            max-width: 500px;
-            transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-            background-color: var(--bg-light);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem; /* Slightly larger radius */
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            text-align: center;
-            opacity: 0; /* Hidden by default */
-        }
-        .testimonial-slide::before { /* Decorative quote icon */
-            content: '“';
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 6rem;
-            font-family: serif;
-            color: rgba(159, 122, 234, 0.1);
-            z-index: -1;
-        }
-        
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 20;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(30, 30, 44, 0.7);
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .carousel-nav:hover {
-            background-color: var(--primary-neon);
-            transform: translateY(-50%) scale(1.1);
-        }
-        #prev-slide { left: 15%; } /* Adjusted position */
-        #next-slide { right: 15%; } /* Adjusted position */
-
-        /* NEW: My Process Section Styles */
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 2rem;
-            position: relative;
-        }
-        @media (min-width: 768px) {
-            .process-grid {
-                grid-template-columns: repeat(5, 1fr);
-            }
-        }
-        .process-item {
-            text-align: center;
-        }
-        .process-icon-wrapper {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 1rem;
-            border-radius: 50%;
-            background-color: var(--bg-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--primary-neon);
-            box-shadow: 0 0 15px rgba(159, 122, 234, 0.3);
-            transition: all 0.3s ease;
-        }
-        .process-item:hover .process-icon-wrapper {
-            transform: scale(1.1);
-            box-shadow: 0 0 25px rgba(159, 122, 234, 0.6);
-        }
-        .process-icon-wrapper i {
-            font-size: 2.5rem;
-            color: var(--primary-neon);
-            transition: color 0.3s ease;
-        }
-        .process-item:hover .process-icon-wrapper i {
-            color: var(--secondary-neon);
-        }
-        .process-line {
-            display: none; /* Hidden on mobile */
-        }
-        @media (min-width: 768px) {
-            .process-line {
-                display: block;
-                position: absolute;
-                top: 50px; /* Vertically center with icons */
-                left: 10%;
-                width: 80%;
-                height: 2px;
-                background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
-                z-index: -1;
-                opacity: 0.3;
-            }
-        }
-
-        /* UPDATED: Infinite Auto-Scroll Carousel with Manual Drag */
-        .scroller {
-            max-width: 100%;
-            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-            overflow-x: auto; /* Allow scrolling */
-            cursor: grab;
-        }
-        .scroller:active {
-            cursor: grabbing;
-        }
-        /* Hide scrollbar */
-        .scroller::-webkit-scrollbar {
-            display: none;
-        }
-        .scroller {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        .scroller__inner {
-            display: flex;
-            gap: 1.5rem;
-            padding-block: 1rem;
-            width: max-content;
-            flex-wrap: nowrap;
-            animation: scroll 40s linear infinite;
-        }
-        .scroller[data-animated="true"] .scroller__inner {
-            width: max-content;
-            flex-wrap: nowrap;
-            animation: scroll 40s linear infinite;
-        }
-        .scroller:hover .scroller__inner {
-            animation-play-state: paused;
-        }
-        @keyframes scroll {
-            to {
-                transform: translate(calc(-50% - 0.75rem));
-            }
-        }
-        .project-card {
-            width: 350px;
-            height: 450px;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            position: relative;
-            flex-shrink: 0;
-            
-            transition: transform 0.5s ease;
-        }
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-        .project-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .project-card:hover img {
-            transform: scale(1.1);
-        }
-        .project-card-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 1.5rem;
-            background: linear-gradient(to top, rgba(18, 18, 28, 0.95) 20%, transparent);
-            transform: translateY(100%);
-            transition: transform 0.5s ease;
-            color: white;
-             display: flex; flex-direction: column; align-items: flex-start;
-    justify-content: flex-end; height: 100%;
-        }
-        .project-card:hover .project-card-content {
-            transform: translateY(0);
-        }
-
-        #mute-button {
-            position: fixed;
-            top: 6rem;
-            right: 1.5rem;
-            z-index: 9999;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(18, 18, 28, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        #mute-button:hover {
-            box-shadow: 0 0 10px var(--primary-neon);
-            transform: scale(1.1);
-        }
-        
-        .btn-primary, .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .btn-primary {
-            background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
-            color: white;
-            border: none;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(159, 122, 234, 0.4);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-neon);
-            border: 2px solid var(--primary-neon);
-        }
-        .btn-secondary:hover {
-            background-color: var(--primary-neon);
-            color: white;
-            box-shadow: 0 0 15px rgba(159, 122, 234, 0.4);
-        }
-        
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--bg-dark);
-            z-index: 10000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 1rem;
-            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-        }
-        #preloader.loaded {
-            opacity: 0;
-            visibility: hidden;
-        }
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid var(--bg-light);
-            border-top-color: var(--primary-neon);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        #mobile-menu-button {
-            z-index: 60;
-        }
-        #mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 75%;
-            max-width: 300px;
-            height: 100vh;
-            background-color: rgba(18, 18, 28, 0.8);
-            backdrop-filter: blur(15px);
-            transition: right 0.3s ease-in-out;
-            z-index: 55;
-        }
-        #mobile-menu.open {
-            right: 0;
-        }
-
-        .scroll-down {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 20;
-            color: white;
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-20px); }
-            60% { transform: translateX(-50%) translateY(-10px); }
-        }
-        
-        .skill-icon {
-            transition: transform 0.3s ease;
-        }
-        .skill-icon-container:hover .skill-icon {
-            transform: scale(1.15) rotate(5deg);
-        }
-        .skill-icon-container {
-            background-color: var(--bg-light);
-            transition: background-color 0.3s ease;
-        }
-        .skill-icon-container:hover {
-            background-color: #2b2b40;
-        }
-
-        #cert-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 10001;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        #cert-modal.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        #cert-modal img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border: 3px solid var(--primary-neon);
-            border-radius: 0.5rem;
-        }
-        #close-modal {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 2.5rem;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        #close-modal:hover {
-            transform: scale(1.2) rotate(90deg);
-        }
-
-        .social-icon:hover {
-            color: var(--primary-neon);
-            transform: translateY(-5px) scale(1.1);
-            transition: all 0.3s ease;
-        }
-
-        /* UPDATED: Graphic Design Section Styles */
-        #graphic-design {
-            padding: 5rem 1rem;
-            position: relative;
-        }
-
-        #graphic-design h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        /* Fix for duplicate ID issue */
-        #projects:last-of-type {
-            display: none;
-        }
-
-        /* Improved infinite scroll animation */
-        @keyframes scroll {
-            to {
-                transform: translate(calc(-50% - 0.75rem));
-            }
-        }
-
-        .scroller[data-direction="right"] {
-            -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-            mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-        }
-
-        .scroller[data-direction="left"] {
-            -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-            mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-900 text-gray-100">
 
     <!-- Preloader -->
@@ -778,7 +51,8 @@
 
     <!-- Mute Button -->
     <button id="mute-button" class="magnetic-item">
-        <svg id="mute-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg id="mute-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
             <!-- Mute/Unmute paths will be injected by JS -->
         </svg>
     </button>
@@ -786,33 +60,54 @@
     <!-- Floating Navbar -->
     <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 md:px-16 transition-all duration-300 glass-effect">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-bold neon-text magnetic-item">SHIVU.</a>
+            <a href="#hero" class="text-2xl font-bold neon-text magnetic-item"><img src="Icon/Logo.png" alt="Logo"
+                    class="inline-block h-8 w-8"></a>
             <ul class="hidden md:flex items-center space-x-8">
-                <li><a href="#about" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">About</a></li>
-                <li><a href="#process" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Process</a></li>
-                <li><a href="#experience" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Experience</a></li>
-                <li><a href="#projects" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Projects</a></li>
-                <li><a href="#skills" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Skills</a></li>
-                <li><a href="#certifications" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Certifications</a></li>
+                <li><a href="#about" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">About</a>
+                </li>
+                <li><a href="#skills"
+                        class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Skills</a></li>
+                <li><a href="#process"
+                        class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Process</a></li>
+                <li><a href="#experience"
+                        class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Experience</a></li>
+                <li><a href="#projects"
+                        class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Projects</a></li>
+
+                <li><a href="#certifications"
+                        class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Certifications</a></li>
                 <li><a href="#contact" class="btn-primary text-sm magnetic-item">Contact</a></li>
             </ul>
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-white focus:outline-none magnetic-item">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
                 </button>
             </div>
         </div>
     </nav>
-    
+
     <!-- Mobile Menu Panel -->
     <div id="mobile-menu" class="pt-24 px-8">
         <ul class="flex flex-col items-center space-y-8">
-            <li><a href="#about" class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">About</a></li>
-            <li><a href="#process" class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Process</a></li>
-            <li><a href="#experience" class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Experience</a></li>
-            <li><a href="#projects" class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Projects</a></li>
-            <li><a href="#skills" class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Skills</a></li>
-            <li><a href="#certifications" class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Certifications</a></li>
+            <li><a href="#about"
+                    class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">About</a></li>
+            <li><a href="#skills"
+                    class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Skills</a></li>
+            <li><a href="#process"
+                    class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Process</a></li>
+            <li><a href="#experience"
+                    class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Experience</a>
+            </li>
+            <li><a href="#projects"
+                    class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Projects</a></li>
+
+            <li><a href="#certifications"
+                    class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Certifications</a>
+            </li>
             <li><a href="#contact" class="btn-primary text-lg mobile-nav-link">Contact</a></li>
         </ul>
     </div>
@@ -822,13 +117,16 @@
         <!-- Hero Section -->
         <section id="hero" class="relative flex flex-col items-center justify-center min-h-screen text-center p-4">
             <div id="hero-content">
-                <h1 id="name" class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter neon-text">
+                <h1 id="name"
+                    class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter neon-text">
                     SHIVAM RAI
                 </h1>
-                <p id="subtitle" class="mt-4 text-xl sm:text-2xl lg:text-3xl font-light text-gray-300">UX Designer | Storyteller | Creator</p>
+                <p id="subtitle" class="mt-4 text-xl sm:text-2xl lg:text-3xl font-light text-gray-300">UX Designer |
+                    Visual Designer | AI Creator</p>
             </div>
             <a href="#about" class="scroll-down">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </a>
@@ -839,33 +137,59 @@
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">About Me</h2>
             <div class="flex flex-col md:flex-row items-start md:space-x-12 space-y-8 md:space-y-0">
                 <div class="md:w-1/3 flex-shrink-0 flex flex-col items-center text-center">
-                    <img src="images/Profile pic.png" alt="Shivam Rai" class="w-full h-auto mx-auto rounded-lg border-4 border-purple-500 shadow-lg">
+                    <img src="images/Profile pic.png" alt="Shivam Rai"
+                        class="w-full h-auto mx-auto rounded-lg border-4 border-purple-500 shadow-lg">
                     <div class="flex flex-col items-start justify-center space-y-4 mt-8 w-full px-4">
-                        <div class="flex items-center space-x-4 text-gray-300"><i class="fas fa-map-marker-alt text-lg text-primary-neon w-5 text-center"></i><p class="text-lg text-left">Dehradun, Uttarakhand, India</p></div>
-                        <a href="tel:+918273566633" class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i class="fas fa-phone-alt text-lg text-primary-neon w-5 text-center"></i><p class="text-lg text-left">+91-82735-66633</p></a>
-                        <a href="mailto:shivurai138@gmail.com" class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i class="fas fa-envelope text-lg text-primary-neon w-5 text-center"></i><p class="text-lg text-left">shivurai138@gmail.com</p></a>
-                        <a href="https://www.linkedin.com/in/shivamrai45/" target="_blank" class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i class="fab fa-linkedin text-lg text-primary-neon w-5 text-center"></i><p class="text-lg text-left">LinkedIn Profile</p></a>
-                        <a href="https://www.figma.com/@RaiShivu" target="_blank" class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i class="fab fa-figma text-lg text-primary-neon w-5 text-center"></i><p class="text-lg text-left">Figma Profile</p></a>
+                        <div class="flex items-center space-x-4 text-gray-300"><i
+                                class="fas fa-map-marker-alt text-lg text-primary-neon w-5 text-center"></i>
+                            <p class="text-lg text-left">Dehradun, Uttarakhand, India</p>
+                        </div>
+                        <a href="tel:+918273566633"
+                            class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i
+                                class="fas fa-phone-alt text-lg text-primary-neon w-5 text-center"></i>
+                            <p class="text-lg text-left">+91-82735-66633</p>
+                        </a>
+                        <a href="mailto:shivurai138@gmail.com"
+                            class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i
+                                class="fas fa-envelope text-lg text-primary-neon w-5 text-center"></i>
+                            <p class="text-lg text-left">shivurai138@gmail.com</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shivamrai45/" target="_blank"
+                            class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i
+                                class="fab fa-linkedin text-lg text-primary-neon w-5 text-center"></i>
+                            <p class="text-lg text-left">LinkedIn Profile</p>
+                        </a>
+                        <a href="https://www.figma.com/@RaiShivu" target="_blank"
+                            class="flex items-center space-x-4 text-gray-300 hover:text-teal-300 transition-colors"><i
+                                class="fab fa-figma text-lg text-primary-neon w-5 text-center"></i>
+                            <p class="text-lg text-left">Figma Profile</p>
+                        </a>
                     </div>
                 </div>
                 <div class="md:w-2/3 text-lg leading-relaxed space-y-6">
-                    <p>I'm a Google-certified UX/UI Designer from Dehradun, Uttarakhand, with a strong passion for creative work and a solid foundation in user-centered design. With a BCA degree and 1 year of experience at Wipro, I specialize in designing intuitive, accessible interfaces and crafting compelling user experiences. I'm always eager to learn and grow, with a keen interest in the gaming industry and environmental design. My ultimate goal is to create my own demos using tools like Blender and Unity.</p>
-                     <div class="pt-6">
-                          <h3 class="text-2xl font-bold text-teal-300 mb-4">Core Skills</h3>
-                          <ul class="space-y-2 text-gray-300 list-disc list-inside">
-                              <li>User Research & Analysis</li>
-                              <li>Wireframing & Prototyping</li>
-                              <li>UI & Visual Design</li>
-                              <li>Interaction Design</li>
-                              <li>Usability Testing</li>
-                          </ul>
-                     </div>
-                     <div class="flex flex-wrap justify-start gap-4 mt-8">
-                         <a href="LatestResume.pdf" download="Shivam_Rai_Resume.pdf" class="btn-primary magnetic-item" target="_blank">
-                             <span>📄</span>
-                             <span>Download Resume</span>
-                         </a>
-                     </div>
+                    <p>I'm a Google-certified UX/UI Designer from Dehradun, Uttarakhand, with a strong passion for
+                        creative work and a solid foundation in user-centered design. With a BCA degree and 1 year of
+                        experience at Wipro, I specialize in designing intuitive, accessible interfaces and crafting
+                        compelling user experiences. I'm always eager to learn and grow, with a keen interest in the
+                        gaming industry and environmental design. My ultimate goal is to create my own demos using tools
+                        like Blender and Unity.</p>
+                    <div class="pt-6">
+                        <h3 class="text-2xl font-bold text-teal-300 mb-4">Core Skills</h3>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li>User Research & Analysis</li>
+                            <li>Wireframing & Prototyping</li>
+                            <li>UI & Visual Design</li>
+                            <li>Interaction Design</li>
+                            <li>Usability Testing</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap justify-start gap-4 mt-8">
+                        <a href="LatestResume.pdf" download="Shivam_Rai_Resume.pdf" class="btn-primary magnetic-item"
+                            target="_blank">
+                            <span>📄</span>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -874,18 +198,30 @@
         <section id="skills" class="py-20 px-4 sm:px-8 max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-12 neon-text">Skills & Tools</h2>
             <div class="flex flex-wrap justify-center items-center gap-8">
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/figma-icon.svg" alt="Figma" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/adobe-illustrator-cc-3.svg" alt="Illustrator" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/adobe-xd-1.svg" alt="Adobe XD" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/FIgjam.png" alt="Fig Jam" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/html-1.svg" alt="HTML5" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/CSS3.svg" alt="CSS3" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/JavaScript.png" alt="JavaScript" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/notion-2.png" alt="Notion" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/Unity1.png" alt="Unity" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/word-1.svg" alt="MS-word" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/powerpoint-2.svg" alt="PowerPoint" class="skill-icon h-16 w-16"></div>
-                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/Miro.png" alt="Miro" class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/figma-icon.svg" alt="Figma"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/adobe-illustrator-cc-3.svg"
+                        alt="Illustrator" class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/adobe-xd-1.svg" alt="Adobe XD"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/FIgjam.png" alt="Fig Jam"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/html-1.svg" alt="HTML5"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/CSS3.svg" alt="CSS3"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/JavaScript.png" alt="JavaScript"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/notion-2.png" alt="Notion"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/Unity1.png" alt="Unity"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/word-1.svg" alt="MS-word"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/powerpoint-2.svg" alt="PowerPoint"
+                        class="skill-icon h-16 w-16"></div>
+                <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/Miro.png" alt="Miro"
+                        class="skill-icon h-16 w-16"></div>
             </div>
         </section>
 
@@ -933,87 +269,370 @@
                 <div class="md:w-1/2 mb-12 md:mb-0">
                     <h3 class="text-3xl font-bold text-teal-300 mb-8 text-center md:text-left">Education</h3>
                     <div class="timeline">
-                        <div class="timeline-item"><h4 class="text-2xl font-bold text-gray-200">BCA (Bachelor of Computer Applications)</h4><p class="text-lg font-semibold text-gray-400">Graphic Era Hill University</p><p class="text-gray-500 text-sm">2021 - 2024</p><p class="text-gray-300 mt-2">Gained a strong foundation in computer applications while also focusing on my passion for design and creative work.</p></div>
+                        <div class="timeline-item">
+                            <h4 class="text-2xl font-bold text-gray-200">BCA (Bachelor of Computer Applications)</h4>
+                            <p class="text-lg font-semibold text-gray-400">Graphic Era Hill University</p>
+                            <p class="text-gray-500 text-sm">2021 - 2024</p>
+                            <p class="text-gray-300 mt-2">Gained a strong foundation in computer applications while also
+                                focusing on my passion for design and creative work.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="md:w-1/2">
                     <h3 class="text-3xl font-bold text-teal-300 mb-8 text-center md:text-left">Work Experience</h3>
                     <div class="timeline">
-                        <div class="timeline-item"><h4 class="text-2xl font-bold text-gray-200">Junior UX Designer</h4><p class="font-semibold text-lg text-gray-400">Wipro</p><p class="text-gray-500 text-sm mb-2">2024 - Present</p><p class="text-gray-300">Contributed to enterprise-level projects, focusing on creating intuitive user flows and enhancing interface designs. Collaborated with development teams to ensure seamless implementation of designs.</p></div>
-                        <div class="timeline-item"><h4 class="text-2xl font-bold text-gray-200">Freelance UI/UX Designer</h4><p class="font-semibold text-lg text-gray-400">Self-Employed</p><p class="text-gray-500 text-sm mb-2">2023 - 2024</p><p class="text-gray-300">Worked with various clients to design and develop websites and mobile app interfaces. Managed projects from initial concept and wireframing through to final high-fidelity prototypes and developer handoff.</p></div>
+                        <div class="timeline-item">
+                            <h4 class="text-2xl font-bold text-gray-200">Junior UX Designer</h4>
+                            <p class="font-semibold text-lg text-gray-400">Wipro</p>
+                            <p class="text-gray-500 text-sm mb-2">2024 - Present</p>
+                            <p class="text-gray-300">Contributed to enterprise-level projects, focusing on creating
+                                intuitive user flows and enhancing interface designs. Collaborated with development
+                                teams to ensure seamless implementation of designs.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-2xl font-bold text-gray-200">Freelance UI/UX Designer</h4>
+                            <p class="font-semibold text-lg text-gray-400">Self-Employed</p>
+                            <p class="text-gray-500 text-sm mb-2">2023 - 2024</p>
+                            <p class="text-gray-300">Worked with various clients to design and develop websites and
+                                mobile app interfaces. Managed projects from initial concept and wireframing through to
+                                final high-fidelity prototypes and developer handoff.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- UPDATED: Graphic Design Work -->
         <section id="graphic-design" class="py-20 w-full overflow-hidden">
-    <h2 class="text-4xl font-bold text-center mb-12 neon-text">Graphic Design Work</h2>
-    <div class="scroller">
-        <div class="scroller" data-animated="true">
-        <div class="scroller__inner">
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=Rockstar+Redesign" alt="Rockstar Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">Rockstar Games Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Marketplace+App" alt="Marketplace App"><div class="project-card-content"><h3 class="text-2xl font-bold">Local Artisans Marketplace</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/FFFFFF?text=3D+Environment" alt="3D Environment"><div class="project-card-content"><h3 class="text-2xl font-bold">3D Environment Demo</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=IRCTC+Redesign" alt="IRCTC Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">IRCTC Website Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Wipro+Tools" alt="Wipro Tools"><div class="project-card-content"><h3 class="text-2xl font-bold">Wipro Internal Tools</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=Rockstar+Redesign" alt="Rockstar Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">Rockstar Games Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Marketplace+App" alt="Marketplace App"><div class="project-card-content"><h3 class="text-2xl font-bold">Local Artisans Marketplace</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/FFFFFF?text=3D+Environment" alt="3D Environment"><div class="project-card-content"><h3 class="text-2xl font-bold">3D Environment Demo</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=IRCTC+Redesign" alt="IRCTC Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">IRCTC Website Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Wipro+Tools" alt="Wipro Tools"><div class="project-card-content"><h3 class="text-2xl font-bold">Wipro Internal Tools</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
-        </div>       
-        </div>
-    </div>
-</section>
+            <h2 class="text-4xl font-bold text-center mb-12 neon-text">Graphic Design Work</h2>
+            <div class="scroller">
+                <div class="scroller" data-animated="true">
+                    <div class="scroller__inner">
+                        <div class="project-card">
+                            <a href="Design Work/Mockup (1).png" target="_blank">
+                                <img src="Design Work/Mockup (1).png" alt="Design 1">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Mockup (2).png" target="_blank">
+                                <img src="Design Work/Mockup (2).png" alt="Design 2">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Mockup (3).png" target="_blank">
+                                <img src="Design Work/Mockup (3).png" alt="Design 3">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Mockup (4).png" target="_blank">
+                                <img src="Design Work/Mockup (4).png" alt="Design 4">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (15).png" target="_blank">
+                                <img src="Design Work/Design (15).png" alt="Design 5">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (16).png" target="_blank">
+                                <img src="Design Work/Design (16).png" alt="Design 6">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (1).png" target="_blank">
+                                <img src="Design Work/Design (1).png" alt="Design 7">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (2).png" target="_blank">
+                                <img src="Design Work/Design (2).png" alt="Design 8">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (3).png" target="_blank">
+                                <img src="Design Work/Design (3).png" alt="Design 9">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (4).png" target="_blank">
+                                <img src="Design Work/Design (4).png" alt="Design 10">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (5).png" target="_blank">
+                                <img src="Design Work/Design (5).png" alt="Design 11">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (17).png" target="_blank">
+                                <img src="Design Work/Design (17).png" alt="Design 12">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (18).png" target="_blank">
+                                <img src="Design Work/Design (18).png" alt="Design 13">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (19).png" target="_blank">
+                                <img src="Design Work/Design (19).png" alt="Design 14">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (20).png" target="_blank">
+                                <img src="Design Work/Design (20).png" alt="Design 15">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (21).png" target="_blank">
+                                <img src="Design Work/Design (21).png" alt="Design 16">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (11).png" target="_blank">
+                                <img src="Design Work/Design (11).png" alt="Design 17">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (12).png" target="_blank">
+                                <img src="Design Work/Design (12).png" alt="Design 18">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (13).png" target="_blank">
+                                <img src="Design Work/Design (13).png" alt="Design 19">
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="Design Work/Design (14).png" target="_blank">
+                                <img src="Design Work/Design (14).png" alt="Design 20">
+                            </a>
+                        </div>
+
+                    </div>
+        </section>
+
+        <!-- Case Studies Section (UPDATED) -->
+        <section id="case-studies" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 neon-text">UX Case Studies</h2>
+            <!-- Use flexbox to center the two cards without a third column -->
+            <div class="case-studies-container">
+                <div class="interactive-card rounded-lg flex-1 min-w-[300px] max-w-lg">
+                    <div class="card-content rounded-md overflow-hidden flex flex-col h-full">
+                        <div class="relative aspect-video"><img src="images/Case Study 2.png" alt="IRCTC Redesign"
+                                class="w-full h-full object-cover"><video class="project-preview" autoplay loop muted>
+                                <source src="https://cdn.pixabay.com/video/2016/09/16/5472-181519782_large.mp4"
+                                    type="video/mp4">
+                            </video></div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold">IRCTC Website Redesign</h3>
+                            <p class="text-gray-400 mt-2 mb-4 text-sm">Redesigned the IRCTC ticket booking platform to
+                                enhance user experience through a modern, intuitive interface. Focused on simplifying
+                                the ticket booking flow, improving accessibility, and integrating helpful
+                                micro-interactions to reduce user friction and build trust.</p>
+                            <div class="mt-auto"><a
+                                    href="https://www.behance.net/gallery/230112253/IRCTC-Website-Redesign-Case-Study"
+                                    class="btn-secondary text-sm magnetic-item" target="_blank">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-card rounded-lg flex-1 min-w-[300px] max-w-lg">
+                    <div class="card-content rounded-md overflow-hidden flex flex-col h-full">
+                        <div class="relative aspect-video"><img src="images/Project 201.png" alt="Artisans Marketplace"
+                                class="w-full h-full object-cover"><video class="project-preview" autoplay loop muted>
+                                <source src="https://cdn.pixabay.com/video/2022/10/26/137682-763467652_large.mp4"
+                                    type="video/mp4">
+                            </video></div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold">Local Artisans Marketplace</h3>
+                            <p class="text-gray-400 mt-2 mb-4 text-sm">Designed a responsive web platform that connects
+                                local Indian artisans with customers. The project highlights easy product discovery,
+                                artisan storytelling, and a smooth purchasing experience, aiming to empower small-scale
+                                creators through thoughtful UX/UI design.</p>
+                            <div class="mt-auto"><a
+                                    href="https://www.behance.net/gallery/229729503/A-Local-Artisans-Marketplace-UIUX-Case-Study"
+                                    class="btn-secondary text-sm magnetic-item" target="_blank">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- UPDATED: Projects Section -->
         <section id="graphic-design" class="py-20 w-full overflow-hidden">
-    <h2 class="text-4xl font-bold text-center mb-12 neon-text">Featured Projects</h2>
-    <div class="scroller">
-        
-        <div class="scroller__inner">
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=Rockstar+Redesign" alt="Rockstar Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">Rockstar Games Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Marketplace+App" alt="Marketplace App"><div class="project-card-content"><h3 class="text-2xl font-bold">Local Artisans Marketplace</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/FFFFFF?text=3D+Environment" alt="3D Environment"><div class="project-card-content"><h3 class="text-2xl font-bold">3D Environment Demo</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=IRCTC+Redesign" alt="IRCTC Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">IRCTC Website Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Wipro+Tools" alt="Wipro Tools"><div class="project-card-content"><h3 class="text-2xl font-bold">Wipro Internal Tools</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=Rockstar+Redesign" alt="Rockstar Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">Rockstar Games Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Marketplace+App" alt="Marketplace App"><div class="project-card-content"><h3 class="text-2xl font-bold">Local Artisans Marketplace</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/FFFFFF?text=3D+Environment" alt="3D Environment"><div class="project-card-content"><h3 class="text-2xl font-bold">3D Environment Demo</h3><a href="#" class="btn-secondary text-sm mt-4">View Project</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/9F7AEA?text=IRCTC+Redesign" alt="IRCTC Redesign"><div class="project-card-content"><h3 class="text-2xl font-bold">IRCTC Website Redesign</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
-            <div class="project-card"><img src="https://placehold.co/350x450/1A202C/38B2AC?text=Wipro+Tools" alt="Wipro Tools"><div class="project-card-content"><h3 class="text-2xl font-bold">Wipro Internal Tools</h3><a href="#" class="btn-secondary text-sm mt-4">View Case Study</a></div></div>
+            <h2 class="text-4xl font-bold text-center mb-12 neon-text">Featured Projects</h2>
+            <div class="scroller">
+
+                <div class="scroller__inner">
+                    <div class="project-card"><img src="images/Project 101.png"
+                            alt="Public Transport QR Recharge Prototype">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">Public Transport QR Recharge Prototype</h3><a
+                                href="https://www.figma.com/proto/1U5gCR2wsSBPtWuWRdjvZ9/Public-Transport-QR-Recharge-Prototype--Community-?node-id=4-3&t=OF7E9EYcMfW7mobW-1"
+                                class="btn-secondary text-sm mt-4" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 202.png" alt="Local Artisans Marketplace">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">Local Artisans Marketplace</h3><a
+                                href="https://www.figma.com/design/U6NV6uZX14Smyh7NtwXgIf/Artisans-Website-2.0V?node-id=0-1&t=4R5OV4qccMsMlMbK-1"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 301.jpg" alt="IRCTC-Re-Design">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">IRCTC-Re-Design</h3><a
+                                href="https://www.figma.com/proto/RhmiIl6S2sDL3PsatrJUqr/IRCTC-Re-Design?page-id=55%3A341&node-id=2020-824&p=f&viewport=526%2C407%2C0.18&t=p03ifK2dTUl6Zzmc-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2020%3A824"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 401.png"
+                            alt="Visual UI Exploration — Glassmorphism Design">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">Visual UI Exploration — Glassmorphism Design</h3><a
+                                href="https://www.behance.net/gallery/194594563/Glassmorphism-Designs" target="_blank"
+                                class="btn-secondary text-sm mt-4">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 501.jpg"
+                            alt="Web App - Preventive Maintenance Company">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">SaaS Analytics Dashboard</h3><a
+                                href="https://www.figma.com/design/pXz9EsVvjUWoo2Ezz5LHVU/Webapp---Preventive-Maintenance-Company?node-id=46-8020&t=tbB5jAKrXT5gKDtT-1"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 601.png" alt="Parallex Effect Game Website">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">Parallex Effect Game Website</h3><a
+                                href="https://www.figma.com/design/U14IZDOTuFpXlWt7z3Jwwc/Parallex-Effect-Game-Website?node-id=0-1&t=tZVdUgwohcnXzfKl-1"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project701.png" alt="Next-Gen AI Voice Assistant UI">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">Next-Gen AI Voice Assistant UI</h3><a
+                                href="https://www.figma.com/proto/99uTlhVgvECFrOJr4KssXj/Voice-Assistance?page-id=0%3A1&node-id=70-130&viewport=1561%2C-3039%2C0.98&t=6u0v0dIF7r57wSGJ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A100"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 801.png" alt="Dating App Onboarding Screen">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">Dating App Onboarding Screen</h3><a
+                                href="https://www.figma.com/proto/kSJo9xHK2beJz9t7F0fUBw/Onboarding-Process?page-id=60%3A1129&node-id=60-1681&p=f&viewport=21%2C236%2C0.21&t=HBNaxQCbs9EiqHG3-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=60%3A1681"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 901.png" alt="Rockstar Redesign">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">Rocstar Website Redesign</h3><a
+                                href="https://www.behance.net/gallery/194959005/Rockstar-Games-Website-Re-Design"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="project-card"><img src="images/Project 100.png" alt="JOG Website Redesign">
+                        <div class="project-card-content">
+                            <h3 class="text-2xl font-bold">JOG Website Redesign</h3><a
+                                href="https://www.behance.net/gallery/233016517/JOG-Sportswear-A-Modern-E-commerce-UXUI-Redesign"
+                                target="_blank" class="btn-secondary text-sm mt-4">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="text-center mt-20">
-                <a href="https://www.figma.com/@RaiShivu" target="_blank" class="btn-primary magnetic-item">View all on Figma</a>
+                <a href="https://www.figma.com/@RaiShivu" target="_blank" class="btn-primary magnetic-item">View all on
+                    Figma</a>
             </div>
-        
-    </div>
-</section>
 
-
-        <!-- Case Studies Section -->
-        <section id="case-studies" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12 neon-text">UX Case Studies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                 <div class="interactive-card rounded-lg"><div class="card-content rounded-md overflow-hidden flex flex-col h-full"><div class="relative aspect-video"><img src="images/Case Study 2.png" alt="IRCTC Redesign" class="w-full h-full object-cover"><video class="project-preview" autoplay loop muted><source src="https://cdn.pixabay.com/video/2016/09/16/5472-181519782_large.mp4" type="video/mp4"></video></div><div class="p-6 flex flex-col flex-grow"><h3 class="text-2xl font-bold">IRCTC Website Redesign</h3><p class="text-gray-400 mt-2 mb-4 text-sm">A UX case study to improve the usability and visual design of the IRCTC ticket booking flow.</p><div class="mt-auto"><a href="#" class="btn-secondary text-sm magnetic-item">View Case Study</a></div></div></div></div>
-                 <div class="interactive-card rounded-lg"><div class="card-content rounded-md overflow-hidden flex flex-col h-full"><div class="relative aspect-video"><img src="images/Case Study 2.png" alt="Artisans Marketplace" class="w-full h-full object-cover"><video class="project-preview" autoplay loop muted><source src="https://cdn.pixabay.com/video/2022/10/26/137682-763467652_large.mp4" type="video/mp4"></video></div><div class="p-6 flex flex-col flex-grow"><h3 class="text-2xl font-bold">Wipro Internal Tools</h3><p class="text-gray-400 mt-2 mb-4 text-sm">Case study on enterprise tool design for Wipro employees, focusing on efficiency and user flow optimization.</p><div class="mt-auto"><a href="#" class="btn-secondary text-sm magnetic-item">View Case Study</a></div></div></div></div>
-                </div>
         </section>
+
+
+
+
 
         <!-- Certifications Section -->
         <section id="certifications" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">Certifications</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="interactive-card p-1 rounded-lg"><div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img src="Certificates/Google UX Design Certificate.jpg" alt="Google UX Design Certificate" class="w-full h-48 object-cover cursor-pointer cert-image"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold">Google UX Design Professional</h3><p class="text-gray-400 mt-2 mb-4">Issued by Google</p><button class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View Certificate</button></div></div></div>
-                <div class="interactive-card p-1 rounded-lg"><div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img src="Certificates/Udemy_Certificate.png" alt="Web & Mobile Designer Certificate" class="w-full h-48 object-cover cursor-pointer cert-image"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold">Complete Web & Mobile Designer</h3><p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View Certificate</button></div></div></div>
-                <div class="interactive-card p-1 rounded-lg"><div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img src="Certificates/MTF_Certificate.jpeg" alt="MTF Certificate" class="w-full h-48 object-cover cursor-pointer cert-image"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold">UX Design Professional Certificate</h3><p class="text-gray-400 mt-2 mb-4">Issued by Institute of Management, Technology & Finance</p><button class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View Certificate</button></div></div></div>
-                <div class="interactive-card p-1 rounded-lg"><div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img src="Certificates/Udemy_Certificate02.jpg" alt="UX Design Essentials - Adobe XD Certificate" class="w-full h-48 object-cover cursor-pointer cert-image"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold">User Experience Design Essentials - Adobe XD</h3><p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View Certificate</button></div></div></div>
-                <div class="interactive-card p-1 rounded-lg"><div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img src="Certificates/Accenture_Certification.png" alt="Accenture_Certification" class="w-full h-48 object-cover cursor-pointer cert-image"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold">Digital Skills: User Experience</h3><p class="text-gray-400 mt-2 mb-4">Issued by Accenture</p><button class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View Certificate</button></div></div></div>
-                <div class="interactive-card p-1 rounded-lg"><div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img src="Certificates/Udemy_Certificate03.png" alt="Accessibility Certificate" class="w-full h-48 object-cover cursor-pointer cert-image"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold">Design for Accessibility (WCAG 2.2)</h3><p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View Certificate</button></div></div></div>
+                <div class="interactive-card p-1 rounded-lg">
+                    <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
+                            src="Certificates/Google UX Design Certificate.jpg" alt="Google UX Design Certificate"
+                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Google UX Design Professional</h3>
+                            <p class="text-gray-400 mt-2 mb-4">Issued by Google</p><button
+                                class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View
+                                Certificate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-card p-1 rounded-lg">
+                    <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
+                            src="Certificates/Udemy_Certificate.png" alt="Web & Mobile Designer Certificate"
+                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Complete Web & Mobile Designer</h3>
+                            <p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button
+                                class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View
+                                Certificate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-card p-1 rounded-lg">
+                    <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
+                            src="Certificates/MTF_Certificate.jpeg" alt="MTF Certificate"
+                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">UX Design Professional Certificate</h3>
+                            <p class="text-gray-400 mt-2 mb-4">Issued by Institute of Management, Technology & Finance
+                            </p><button class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View
+                                Certificate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-card p-1 rounded-lg">
+                    <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
+                            src="Certificates/Udemy_Certificate02.jpg" alt="UX Design Essentials - Adobe XD Certificate"
+                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">User Experience Design Essentials - Adobe XD</h3>
+                            <p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button
+                                class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View
+                                Certificate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-card p-1 rounded-lg">
+                    <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
+                            src="Certificates/Accenture_Certification.png" alt="Accenture_Certification"
+                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Digital Skills: User Experience</h3>
+                            <p class="text-gray-400 mt-2 mb-4">Issued by Accenture</p><button
+                                class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View
+                                Certificate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-card p-1 rounded-lg">
+                    <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
+                            src="Certificates/Udemy_Certificate03.png" alt="Accessibility Certificate"
+                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Design for Accessibility (WCAG 2.2)</h3>
+                            <p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button
+                                class="btn-secondary text-sm mt-auto cert-view-btn magnetic-item">View
+                                Certificate</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="text-center mt-20">
-                <a href="https://www.linkedin.com/in/shivamrai45/" target="_blank" class="btn-primary magnetic-item">View all on LinkedIn</a>
+                <a href="https://www.linkedin.com/in/shivamrai45/" target="_blank"
+                    class="btn-primary magnetic-item">View all on LinkedIn</a>
             </div>
         </section>
 
@@ -1022,18 +641,24 @@
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">What Others Say</h2>
             <div id="testimonial-carousel-container">
                 <div class="testimonial-slide">
-                    <img src="https://placehold.co/100x100/1E1E2C/9F7AEA?text=Client+1" alt="Client 1" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
-                    <p class="text-xl italic text-gray-300">"Shivam's creativity and dedication are unmatched. He delivered a product that exceeded all our expectations."</p>
+                    <img src="https://placehold.co/100x100/1E1E2C/9F7AEA?text=Client+1" alt="Client 1"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
+                    <p class="text-xl italic text-gray-300">"Shivam's creativity and dedication are unmatched. He
+                        delivered a product that exceeded all our expectations."</p>
                     <p class="mt-4 font-bold text-lg">- Priya Sharma, Project Manager</p>
                 </div>
                 <div class="testimonial-slide">
-                    <img src="https://placehold.co/100x100/1E1E2C/38B2AC?text=Client+2" alt="Client 2" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
-                    <p class="text-xl italic text-gray-300">"Working with Shivam was a breeze. He's a great communicator and truly understands user-centric design."</p>
+                    <img src="https://placehold.co/100x100/1E1E2C/38B2AC?text=Client+2" alt="Client 2"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
+                    <p class="text-xl italic text-gray-300">"Working with Shivam was a breeze. He's a great communicator
+                        and truly understands user-centric design."</p>
                     <p class="mt-4 font-bold text-lg">- Rohan Verma, Startup Founder</p>
                 </div>
                 <div class="testimonial-slide">
-                    <img src="https://placehold.co/100x100/1E1E2C/FFFFFF?text=Client+3" alt="Client 3" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
-                    <p class="text-xl italic text-gray-300">"His passion for gaming UX really shines through. The insights he brought to our project were invaluable."</p>
+                    <img src="https://placehold.co/100x100/1E1E2C/FFFFFF?text=Client+3" alt="Client 3"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
+                    <p class="text-xl italic text-gray-300">"His passion for gaming UX really shines through. The
+                        insights he brought to our project were invaluable."</p>
                     <p class="mt-4 font-bold text-lg">- Anjali Singh, Lead Developer</p>
                 </div>
             </div>
@@ -1046,20 +671,30 @@
         <footer id="contact" class="pt-20 px-4 sm:px-8 text-center">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-5xl font-bold mb-4">Get In Touch</h2>
-                <p class="text-lg text-gray-400 mb-8 max-w-xl mx-auto">I'm currently available for freelance projects and full-time opportunities. Drop me a line below!</p>
+                <p class="text-lg text-gray-400 mb-8 max-w-xl mx-auto">I'm currently available for freelance projects
+                    and full-time opportunities. Drop me a line below!</p>
                 <form id="contact-form" class="space-y-6 mb-12">
                     <div class="flex flex-col md:flex-row gap-6">
-                        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-neon">
-                        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-neon">
+                        <input type="text" name="name" placeholder="Your Name" required
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-neon">
+                        <input type="email" name="email" placeholder="Your Email" required
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-neon">
                     </div>
-                    <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-neon"></textarea>
+                    <textarea name="message" placeholder="Your Message" rows="5" required
+                        class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-neon"></textarea>
                     <button type="submit" class="btn-primary w-full md:w-auto magnetic-item">Send Message</button>
                 </form>
                 <p id="form-status" class="h-6 text-sm"></p>
                 <div class="flex justify-center space-x-6 mb-8">
-                    <a href="https://www.behance.net/shivamrai45" class="text-gray-400 hover:text-white transition-colors social-icon magnetic-item"><i class="fab fa-behance fa-2x"></i></a>
-                    <a href="https://www.linkedin.com/in/shivamrai45/" class="text-gray-400 hover:text-white transition-colors social-icon magnetic-item"><i class="fab fa-linkedin-in fa-2x"></i></a>
-                    <a href="https://www.figma.com/@RaiShivu" class="text-gray-400 hover:text-white transition-colors social-icon magnetic-item"><i class="fab fa-figma fa-2x"></i></a>
+                    <a href="https://www.behance.net/shivamrai45"
+                        class="text-gray-400 hover:text-white transition-colors social-icon magnetic-item"><i
+                            class="fab fa-behance fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/shivamrai45/"
+                        class="text-gray-400 hover:text-white transition-colors social-icon magnetic-item"><i
+                            class="fab fa-linkedin-in fa-2x"></i></a>
+                    <a href="https://www.figma.com/@RaiShivu"
+                        class="text-gray-400 hover:text-white transition-colors social-icon magnetic-item"><i
+                            class="fab fa-figma fa-2x"></i></a>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-12 py-8">
@@ -1077,506 +712,8 @@
         <img id="modal-image" src="" alt="Certificate Preview">
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            initInfiniteScroller();
-            // --- Preloader ---
-            const preloader = document.getElementById('preloader');
-            const nameEl = document.getElementById('name');
-            const subtitleEl = document.getElementById('subtitle');
-            
-            const originalName = nameEl.textContent.trim();
-            nameEl.textContent = ''; // Clear name for scramble effect
-            subtitleEl.textContent = ''; // Clear subtitle for scramble effect
+    <script src="script.js"></script>
 
-            window.addEventListener('load', () => {
-                preloader.classList.add('loaded');
-                // NEW: Text Scramble Effect
-                class TextScramble {
-                    constructor(el) {
-                        this.el = el;
-                        this.chars = '!<>-_\\/[]{}—=+*^?#________';
-                        this.update = this.update.bind(this);
-                    }
-                    setText(newText) {
-                        const oldText = this.el.innerText;
-                        const length = Math.max(oldText.length, newText.length);
-                        const promise = new Promise((resolve) => this.resolve = resolve);
-                        this.queue = [];
-                        for (let i = 0; i < length; i++) {
-                            const from = oldText[i] || '';
-                            const to = newText[i] || '';
-                            const start = Math.floor(Math.random() * 40);
-                            const end = start + Math.floor(Math.random() * 40);
-                            this.queue.push({ from, to, start, end });
-                        }
-                        cancelAnimationFrame(this.frameRequest);
-                        this.frame = 0;
-                        this.update();
-                        return promise;
-                    }
-                    update() {
-                        let output = '';
-                        let complete = 0;
-                        for (let i = 0, n = this.queue.length; i < n; i++) {
-                            let { from, to, start, end, char } = this.queue[i];
-                            if (this.frame >= end) {
-                                complete++;
-                                output += to;
-                            } else if (this.frame >= start) {
-                                if (!char || Math.random() < 0.28) {
-                                    char = this.randomChar();
-                                    this.queue[i].char = char;
-                                }
-                                output += `<span class="dud" style="opacity: 0.5">${char}</span>`;
-                            } else {
-                                output += from;
-                            }
-                        }
-                        this.el.innerHTML = output;
-                        if (complete === this.queue.length) {
-                            this.resolve();
-                        } else {
-                            this.frameRequest = requestAnimationFrame(this.update);
-                            this.frame++;
-                        }
-                    }
-                    randomChar() {
-                        return this.chars[Math.floor(Math.random() * this.chars.length)];
-                    }
-                }
-                const nameFx = new TextScramble(nameEl);
-                const subtitleFx = new TextScramble(subtitleEl);
-                
-                const subtitles = [
-                    'UX Designer | Storyteller | Creator',
-                    'Crafting Experiences, One Pixel at a Time',
-                    'Turning Ideas into Intuitive Designs'
-                ];
-                let subtitleCounter = 0;
-
-                const nextSubtitle = () => {
-                    subtitleFx.setText(subtitles[subtitleCounter]).then(() => {
-                        setTimeout(nextSubtitle, 4000); // Wait 4s before next scramble
-                    });
-                    subtitleCounter = (subtitleCounter + 1) % subtitles.length;
-                };
-
-                setTimeout(() => {
-                    nameFx.setText(originalName).then(() => {
-                        setTimeout(nextSubtitle, 1000); // Start subtitle cycle after name is done
-                    });
-                }, 500); // Delay after preloader fades
-            });
-
-            // --- Custom Cursor & Aura ---
-            const cursor = document.querySelector('.custom-cursor');
-            const follower = document.querySelector('.cursor-follower');
-            const aura = document.querySelector('.aura');
-            let mouseX = 0, mouseY = 0;
-            let clientX = 0, clientY = 0;
-            window.addEventListener('mousemove', (e) => {
-                clientX = e.clientX;
-                clientY = e.clientY;
-            });
-
-            const renderCursor = () => {
-                mouseX += (clientX - mouseX) * 0.1;
-                mouseY += (clientY - mouseY) * 0.1;
-
-                cursor.style.transform = `translate(${clientX - 2}px, ${clientY - 2}px)`;
-                follower.style.transform = `translate(${mouseX - 15}px, ${mouseY - 15}px)`;
-                aura.style.transform = `translate(${mouseX - 200}px, ${mouseY - 200}px)`;
-                requestAnimationFrame(renderCursor);
-            }
-            renderCursor();
-
-            // --- Three.js Particle System ---
-            const canvas = document.getElementById('hero-3d-canvas');
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-            const mouse = new THREE.Vector2();
-            
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-            camera.position.z = 5;
-
-            window.addEventListener('mousemove', (event) => {
-                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-            });
-
-            const particlesGeometry = new THREE.BufferGeometry;
-            const particlesCount = 5000;
-            const posArray = new Float32Array(particlesCount * 3);
-            const originalPos = new Float32Array(particlesCount * 3);
-            for(let i=0; i < particlesCount * 3; i++) {
-                posArray[i] = (Math.random() - 0.5) * 10;
-                originalPos[i] = posArray[i];
-            }
-            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-            const particlesMaterial = new THREE.PointsMaterial({
-                size: 0.015,
-                color: 0x9f7aea,
-                blending: THREE.AdditiveBlending
-            });
-            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-            scene.add(particlesMesh);
-            
-            const clock = new THREE.Clock();
-            const animate = () => {
-                requestAnimationFrame(animate);
-                const elapsedTime = clock.getElapsedTime();
-                particlesMesh.rotation.y = -0.05 * elapsedTime;
-                
-                // NEW: Enhanced mouse interaction
-                const positions = particlesGeometry.attributes.position.array;
-                for (let i = 0; i < particlesCount; i++) {
-                    const ix = i * 3;
-                    const iy = i * 3 + 1;
-                    const iz = i * 3 + 2;
-
-                    const dx = mouse.x * 5 - originalPos[ix];
-                    const dy = mouse.y * 5 - originalPos[iy];
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    
-                    const force = Math.max(0, 1 - dist * 0.5);
-                    
-                    positions[ix] = originalPos[ix] + dx * force * 0.1;
-                    positions[iy] = originalPos[iy] + dy * force * 0.1;
-                }
-                particlesGeometry.attributes.position.needsUpdate = true;
-                
-                renderer.render(scene, camera);
-            };
-            animate();
-            
-            window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            });
-
-            // --- GSAP Scroll & Interactive Animations ---
-            gsap.registerPlugin(ScrollTrigger);
-
-            // 1. Animate 3D Camera on Scroll
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: "main",
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: 1,
-                }
-            }).to(camera.position, { z: 10, y: -2 }) // FIXED: Reduced zoom out
-              .to(camera.rotation, { x: -0.4, ease: "power1.inOut" }, "<");
-
-            // 2. Animate Section Titles
-            gsap.utils.toArray('h2.neon-text').forEach(title => {
-                gsap.from(title, {
-                    scrollTrigger: {
-                        trigger: title,
-                        start: 'top 90%',
-                        toggleActions: 'restart none none reverse',
-                    },
-                    opacity: 0, y: 40, duration: 0.8, ease: 'power3.out',
-                });
-            });
-
-            // 3. Animate Individual Sections
-            gsap.from('#about img', { scrollTrigger: { trigger: '#about', start: 'top 80%', toggleActions: 'restart none none reverse' }, opacity: 0, x: -50, duration: 1, ease: 'power3.out' });
-            gsap.from('#about .md\\:w-2\\/3 > *', { scrollTrigger: { trigger: '#about', start: 'top 80%', toggleActions: 'restart none none reverse' }, opacity: 0, x: 50, duration: 1, stagger: 0.2, ease: 'power3.out' });
-            
-            gsap.utils.toArray('.timeline-item').forEach(item => {
-                gsap.from(item, { scrollTrigger: { trigger: item, start: 'top 85%', toggleActions: 'restart none none reverse' }, opacity: 0, x: -40, duration: 0.8, ease: 'power3.out' });
-            });
-
-            // 4. Skills Section pop-up animation
-            gsap.from('.skill-icon-container', { 
-                scrollTrigger: { 
-                    trigger: '#skills', 
-                    start: 'top 80%', 
-                    toggleActions: 'restart none none reverse' 
-                }, 
-                opacity: 0, 
-                y: 30, 
-                scale: 0.8, 
-                duration: 0.5, 
-                stagger: 0.1, 
-                ease: 'back.out(1.7)' 
-            });
-            
-            // 5. Timeline Spotlight Animation
-            const spotlight = document.getElementById('timeline-spotlight');
-            gsap.utils.toArray('.timeline-item').forEach((item, i) => {
-                ScrollTrigger.create({
-                    trigger: item,
-                    start: 'top center',
-                    end: 'bottom center',
-                    onEnter: () => gsap.to(spotlight, { y: item.offsetTop + 20, duration: 0.8, ease: 'power3.out' }),
-                    onEnterBack: () => gsap.to(spotlight, { y: item.offsetTop + 20, duration: 0.8, ease: 'power3.out' }),
-                });
-            });
-
-            // 6. Magnetic Buttons Effect
-            const magneticItems = document.querySelectorAll('.magnetic-item');
-            magneticItems.forEach(item => {
-                item.addEventListener('mousemove', (e) => {
-                    const rect = item.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-
-                    gsap.to(item, { x: x * 0.3, y: y * 0.3, duration: 0.5, ease: 'power2.out' });
-                });
-
-                item.addEventListener('mouseleave', () => {
-                    gsap.to(item, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.3)' });
-                });
-            });
-
-            // 7. Card animations for Projects, Case Studies, and Certifications
-            ['#case-studies', '#certifications', '#process', '#projects'].forEach(sectionId => {
-                const items = sectionId === '#process' ? `${sectionId} .process-item` : `${sectionId} .interactive-card, ${sectionId} .project-card`;
-                gsap.from(items, {
-                    scrollTrigger: {
-                        trigger: sectionId,
-                        start: 'top 80%',
-                        toggleActions: 'restart none none reverse'
-                    },
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.6,
-                    stagger: 0.2,
-                    ease: 'power3.out'
-                });
-            });
-
-            // 8. Testimonial Carousel Logic
-            const slides = gsap.utils.toArray('.testimonial-slide');
-            const prevBtn = document.getElementById('prev-slide');
-            const nextBtn = document.getElementById('next-slide');
-            let currentIndex = 0;
-            let autoPlayInterval;
-
-            function updateSlidePositions(animated = true) {
-                slides.forEach((slide, i) => {
-                    const offset = (i - currentIndex + slides.length) % slides.length;
-                    let xPercent, scale, opacity, zIndex, rotationY;
-
-                    if (offset === 0) { // Center slide
-                        xPercent = 0;
-                        scale = 1;
-                        opacity = 1;
-                        zIndex = 10;
-                        rotationY = 0;
-                    } else if (offset === 1) { // Right slide
-                        xPercent = 75; // FIXED: Pulled card inwards
-                        scale = 0.8;
-                        opacity = 0.5;
-                        zIndex = 5;
-                        rotationY = -45;
-                    } else if (offset === slides.length - 1) { // Left slide
-                        xPercent = -75; // FIXED: Pulled card inwards
-                        scale = 0.8;
-                        opacity = 0.5;
-                        zIndex = 5;
-                        rotationY = 45;
-                    } else { // Other slides (hidden)
-                        xPercent = offset > slides.length / 2 ? -200 : 200;
-                        scale = 0.7;
-                        opacity = 0;
-                        zIndex = 0;
-                        rotationY = offset > slides.length / 2 ? 90 : -90;
-                    }
-                    
-                    gsap.to(slide, {
-                        xPercent: xPercent,
-                        scale: scale,
-                        opacity: opacity,
-                        zIndex: zIndex,
-                        rotationY: rotationY,
-                        duration: animated ? 0.8 : 0,
-                        ease: 'power3.out'
-                    });
-                });
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                updateSlidePositions();
-            }
-
-            function prevSlide() {
-                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                updateSlidePositions();
-            }
-
-            function startAutoPlay() {
-                autoPlayInterval = setInterval(nextSlide, 5000);
-            }
-
-            function stopAutoPlay() {
-                clearInterval(autoPlayInterval);
-            }
-
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                stopAutoPlay();
-                startAutoPlay();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                stopAutoPlay();
-                startAutoPlay();
-            });
-            
-            document.getElementById('testimonial-carousel-container').addEventListener('mouseenter', stopAutoPlay);
-            document.getElementById('testimonial-carousel-container').addEventListener('mouseleave', startAutoPlay);
-
-            updateSlidePositions(false); // Initial position without animation
-            startAutoPlay(); // Start the auto-play
-            
-            // 9. Animations for Testimonials and Contact
-            gsap.from('#testimonials > *', {
-                scrollTrigger: { trigger: '#testimonials', start: 'top 80%', toggleActions: 'restart none none reverse' },
-                y: 50, opacity: 0, stagger: 0.2, duration: 0.8, ease: 'power3.out'
-            });
-            gsap.from('#contact .max-w-2xl > *', {
-                scrollTrigger: { trigger: '#contact', start: 'top 80%', toggleActions: 'restart none none reverse' },
-                y: 50, opacity: 0, stagger: 0.2, duration: 0.8, ease: 'power3.out'
-            });
-
-            // 10. Infinite Auto-Scroll & Manual Drag for Projects
-            const scrollers = document.querySelectorAll(".scroller");
-
-            if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-                addAnimation();
-            }
-
-            function addAnimation() {
-                scrollers.forEach((scroller) => {
-                    scroller.setAttribute("data-animated", true);
-                    const scrollerInner = scroller.querySelector(".scroller__inner");
-                    const scrollerContent = Array.from(scrollerInner.children);
-
-                    scrollerContent.forEach((item) => {
-                        const duplicatedItem = item.cloneNode(true);
-                        duplicatedItem.setAttribute("aria-hidden", true);
-                        scrollerInner.appendChild(duplicatedItem);
-                    });
-
-                    // Drag-to-scroll logic
-                    let isDown = false;
-                    let startX;
-                    let scrollLeft;
-
-                    scroller.addEventListener('mousedown', (e) => {
-                        isDown = true;
-                        scroller.style.cursor = 'grabbing';
-                        startX = e.pageX - scroller.offsetLeft;
-                        scrollLeft = scroller.scrollLeft;
-                    });
-                    scroller.addEventListener('mouseleave', () => {
-                        isDown = false;
-                        scroller.style.cursor = 'grab';
-                    });
-                    scroller.addEventListener('mouseup', () => {
-                        isDown = false;
-                        scroller.style.cursor = 'grab';
-                    });
-                    scroller.addEventListener('mousemove', (e) => {
-                        if(!isDown) return;
-                        e.preventDefault();
-                        const x = e.pageX - scroller.offsetLeft;
-                        const walk = (x - startX) * 2; // The multiplier makes scrolling faster
-                        scroller.scrollLeft = scrollLeft - walk;
-                    });
-                });
-            }
-
-            function initInfiniteScroller() {
-    const scroller = document.querySelector(".scroller__inner");
-    if (scroller) {
-        const scrollerContent = Array.from(scroller.children);
-        scrollerContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scroller.appendChild(duplicatedItem);
-        });
-    }
-}
-
-            // --- Sound Effects ---
-            let isMuted = true;
-            const muteButton = document.getElementById('mute-button');
-            const muteIcon = document.getElementById('mute-icon');
-            const synth = new Tone.FMSynth().toDestination();
-            const ambientSynth = new Tone.PolySynth(Tone.AMSynth, { harmonicity: 1.5, envelope: { attack: 5, decay: 0.1, sustain: 1, release: 5 }, volume: -25 }).toDestination();
-            const ambientPattern = new Tone.Pattern((time, note) => { ambientSynth.triggerAttackRelease(note, "2n", time); }, ["C2", "G2", "Eb3"], "random").start(0);
-            ambientPattern.interval = "2m";
-            Tone.Transport.bpm.value = 60;
-
-            const iconMuted = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>`;
-            const iconUnmuted = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.586a2 2 0 01-2.828 0L2 14.828a2 2 0 010-2.828l1.172-1.172a2 2 0 012.828 0l.707.707a2 2 0 010 2.828l-1.172 1.172z"></path>`;
-
-            const updateMuteIcon = () => { muteIcon.innerHTML = isMuted ? iconMuted : iconUnmuted; };
-            updateMuteIcon();
-
-            muteButton.addEventListener('click', async () => {
-                if (Tone.context.state !== 'running') await Tone.start();
-                isMuted = !isMuted;
-                isMuted ? Tone.Transport.stop() : Tone.Transport.start();
-                updateMuteIcon();
-            });
-            
-            document.querySelectorAll('a, button').forEach(el => {
-                el.addEventListener('mouseenter', () => { if (!isMuted) synth.triggerAttackRelease('C5', '8n'); });
-            });
-            
-            // --- Mobile Menu Toggle ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-            mobileNavLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
-            
-            // --- Contact Form Submission ---
-            const contactForm = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                formStatus.textContent = 'Sending...';
-                formStatus.style.color = 'var(--secondary-neon)';
-                setTimeout(() => {
-                    formStatus.textContent = 'Message Sent! Thank you.';
-                    formStatus.style.color = 'var(--secondary-neon)';
-                    contactForm.reset();
-                    setTimeout(() => formStatus.textContent = '', 3000);
-                }, 1500);
-            });
-
-            // --- Certificate Modal Logic ---
-            const certModal = document.getElementById('cert-modal');
-            const modalImage = document.getElementById('modal-image');
-            const closeModal = document.getElementById('close-modal');
-            
-            const openModal = (el) => {
-                const imgSrc = el.closest('.card-content').querySelector('.cert-image').src;
-                modalImage.src = imgSrc;
-                certModal.classList.add('visible');
-            }
-
-            document.querySelectorAll('.cert-image, .cert-view-btn').forEach(el => {
-                el.addEventListener('click', () => openModal(el));
-            });
-            
-            closeModal.addEventListener('click', () => certModal.classList.remove('visible'));
-            certModal.addEventListener('click', (e) => { if (e.target === certModal) certModal.classList.remove('visible'); });
-        });
-    </script>
 </body>
+
 </html>
