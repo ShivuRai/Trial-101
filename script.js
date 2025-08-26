@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     initInfiniteScroller();
     // --- Preloader ---
@@ -29,7 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const to = newText[i] || '';
                     const start = Math.floor(Math.random() * 40);
                     const end = start + Math.floor(Math.random() * 40);
-                    this.queue.push({ from, to, start, end });
+                    this.queue.push({
+                        from,
+                        to,
+                        start,
+                        end
+                    });
                 }
                 cancelAnimationFrame(this.frameRequest);
                 this.frame = 0;
@@ -40,7 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 let output = '';
                 let complete = 0;
                 for (let i = 0, n = this.queue.length; i < n; i++) {
-                    let { from, to, start, end, char } = this.queue[i];
+                    let {
+                        from,
+                        to,
+                        start,
+                        end,
+                        char
+                    } = this.queue[i];
                     if (this.frame >= end) {
                         complete++;
                         output += to;
@@ -94,8 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.querySelector('.custom-cursor');
     const follower = document.querySelector('.cursor-follower');
     const aura = document.querySelector('.aura');
-    let mouseX = 0, mouseY = 0;
-    let clientX = 0, clientY = 0;
+    let mouseX = 0,
+        mouseY = 0;
+    let clientX = 0,
+        clientY = 0;
     window.addEventListener('mousemove', (e) => {
         clientX = e.clientX;
         clientY = e.clientY;
@@ -116,7 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('hero-3d-canvas');
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
+        antialias: true
+    });
     const mouse = new THREE.Vector2();
 
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -191,8 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
             end: "bottom bottom",
             scrub: 1,
         }
-    }).to(camera.position, { z: 10, y: -2 }) // FIXED: Reduced zoom out
-        .to(camera.rotation, { x: -0.4, ease: "power1.inOut" }, "<");
+    }).to(camera.position, {
+        z: 10,
+        y: -2
+    }) // FIXED: Reduced zoom out
+        .to(camera.rotation, {
+            x: -0.4,
+            ease: "power1.inOut"
+        }, "<");
 
     // 2. Animate Section Titles
     gsap.utils.toArray('h2.neon-text').forEach(title => {
@@ -202,16 +224,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: 'top 90%',
                 toggleActions: 'restart none none reverse',
             },
-            opacity: 0, y: 40, duration: 0.8, ease: 'power3.out',
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: 'power3.out',
         });
     });
 
     // 3. Animate Individual Sections
-    gsap.from('#about img', { scrollTrigger: { trigger: '#about', start: 'top 80%', toggleActions: 'restart none none reverse' }, opacity: 0, x: -50, duration: 1, ease: 'power3.out' });
-    gsap.from('#about .md\\:w-2\\/3 > *', { scrollTrigger: { trigger: '#about', start: 'top 80%', toggleActions: 'restart none none reverse' }, opacity: 0, x: 50, duration: 1, stagger: 0.2, ease: 'power3.out' });
+    gsap.from('#about img', {
+        scrollTrigger: {
+            trigger: '#about',
+            start: 'top 80%',
+            toggleActions: 'restart none none reverse'
+        },
+        opacity: 0,
+        x: -50,
+        duration: 1,
+        ease: 'power3.out'
+    });
+    gsap.from('#about .md\\:w-2\\/3 > *', {
+        scrollTrigger: {
+            trigger: '#about',
+            start: 'top 80%',
+            toggleActions: 'restart none none reverse'
+        },
+        opacity: 0,
+        x: 50,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power3.out'
+    });
 
     gsap.utils.toArray('.timeline-item').forEach(item => {
-        gsap.from(item, { scrollTrigger: { trigger: item, start: 'top 85%', toggleActions: 'restart none none reverse' }, opacity: 0, x: -40, duration: 0.8, ease: 'power3.out' });
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                toggleActions: 'restart none none reverse'
+            },
+            opacity: 0,
+            x: -40,
+            duration: 0.8,
+            ease: 'power3.out'
+        });
     });
 
     // 4. Skills Section pop-up animation
@@ -236,8 +292,16 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: item,
             start: 'top center',
             end: 'bottom center',
-            onEnter: () => gsap.to(spotlight, { y: item.offsetTop + 20, duration: 0.8, ease: 'power3.out' }),
-            onEnterBack: () => gsap.to(spotlight, { y: item.offsetTop + 20, duration: 0.8, ease: 'power3.out' }),
+            onEnter: () => gsap.to(spotlight, {
+                y: item.offsetTop + 20,
+                duration: 0.8,
+                ease: 'power3.out'
+            }),
+            onEnterBack: () => gsap.to(spotlight, {
+                y: item.offsetTop + 20,
+                duration: 0.8,
+                ease: 'power3.out'
+            }),
         });
     });
 
@@ -249,11 +313,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
 
-            gsap.to(item, { x: x * 0.3, y: y * 0.3, duration: 0.5, ease: 'power2.out' });
+            gsap.to(item, {
+                x: x * 0.3,
+                y: y * 0.3,
+                duration: 0.5,
+                ease: 'power2.out'
+            });
         });
 
         item.addEventListener('mouseleave', () => {
-            gsap.to(item, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.3)' });
+            gsap.to(item, {
+                x: 0,
+                y: 0,
+                duration: 0.5,
+                ease: 'elastic.out(1, 0.3)'
+            });
         });
     });
 
@@ -362,12 +436,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 9. Animations for Testimonials and Contact
     gsap.from('#testimonials > *', {
-        scrollTrigger: { trigger: '#testimonials', start: 'top 80%', toggleActions: 'restart none none reverse' },
-        y: 50, opacity: 0, stagger: 0.2, duration: 0.8, ease: 'power3.out'
+        scrollTrigger: {
+            trigger: '#testimonials',
+            start: 'top 80%',
+            toggleActions: 'restart none none reverse'
+        },
+        y: 50,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: 'power3.out'
     });
     gsap.from('#contact .max-w-2xl > *', {
-        scrollTrigger: { trigger: '#contact', start: 'top 80%', toggleActions: 'restart none none reverse' },
-        y: 50, opacity: 0, stagger: 0.2, duration: 0.8, ease: 'power3.out'
+        scrollTrigger: {
+            trigger: '#contact',
+            start: 'top 80%',
+            toggleActions: 'restart none none reverse'
+        },
+        y: 50,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: 'power3.out'
     });
 
     // 10. Infinite Auto-Scroll & Manual Drag for Projects
@@ -434,27 +524,62 @@ document.addEventListener('DOMContentLoaded', () => {
     let isMuted = true;
     const muteButton = document.getElementById('mute-button');
     const muteIcon = document.getElementById('mute-icon');
-    const synth = new Tone.FMSynth().toDestination();
-    const ambientSynth = new Tone.PolySynth(Tone.AMSynth, { harmonicity: 1.5, envelope: { attack: 5, decay: 0.1, sustain: 1, release: 5 }, volume: -25 }).toDestination();
-    const ambientPattern = new Tone.Pattern((time, note) => { ambientSynth.triggerAttackRelease(note, "2n", time); }, ["C2", "G2", "Eb3"], "random").start(0);
-    ambientPattern.interval = "2m";
-    Tone.Transport.bpm.value = 60;
+    let synth = null;
+    let ambientSynth = null;
+    let ambientPattern = null;
+
+    const initAudio = async () => {
+        if (Tone.context.state !== 'running') {
+            await Tone.start();
+        }
+        if (!synth) {
+            synth = new Tone.FMSynth().toDestination();
+        }
+        if (!ambientSynth) {
+            ambientSynth = new Tone.PolySynth(Tone.AMSynth, {
+                harmonicity: 1.5,
+                envelope: {
+                    attack: 5,
+                    decay: 0.1,
+                    sustain: 1,
+                    release: 5
+                },
+                volume: -25
+            }).toDestination();
+            ambientPattern = new Tone.Pattern((time, note) => {
+                ambientSynth.triggerAttackRelease(note, "2n", time);
+            }, ["C2", "G2", "Eb3"], "random").start(0);
+            ambientPattern.interval = "2m";
+            Tone.Transport.bpm.value = 60;
+        }
+    }
+
 
     const iconMuted = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>`;
     const iconUnmuted = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.586a2 2 0 01-2.828 0L2 14.828a2 2 0 010-2.828l1.172-1.172a2 2 0 012.828 0l.707.707a2 2 0 010 2.828l-1.172 1.172z"></path>`;
 
-    const updateMuteIcon = () => { muteIcon.innerHTML = isMuted ? iconMuted : iconUnmuted; };
+    const updateMuteIcon = () => {
+        muteIcon.innerHTML = isMuted ? iconMuted : iconUnmuted;
+    };
     updateMuteIcon();
 
     muteButton.addEventListener('click', async () => {
         if (Tone.context.state !== 'running') await Tone.start();
         isMuted = !isMuted;
-        isMuted ? Tone.Transport.stop() : Tone.Transport.start();
+        if (isMuted) {
+            Tone.Transport.stop();
+        } else {
+            Tone.Transport.start();
+        }
         updateMuteIcon();
     });
 
     document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseenter', () => { if (!isMuted) synth.triggerAttackRelease('C5', '8n'); });
+        el.addEventListener('mouseenter', () => {
+            if (!isMuted && synth) {
+                synth.triggerAttackRelease('C5', '8n');
+            }
+        });
     });
 
     // --- Mobile Menu Toggle ---
@@ -496,5 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     closeModal.addEventListener('click', () => certModal.classList.remove('visible'));
-    certModal.addEventListener('click', (e) => { if (e.target === certModal) certModal.classList.remove('visible'); });
+    certModal.addEventListener('click', (e) => {
+        if (e.target === certModal) certModal.classList.remove('visible');
+    });
 });
