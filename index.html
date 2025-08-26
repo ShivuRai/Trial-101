@@ -6,34 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivam Rai | UX Designer Portfolio</title>
     <link rel="icon" type="image/png" href="Icon/Logo.png">
-    <!-- Google Fonts for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Electrolize&display=swap"
         rel="stylesheet">
-    <!-- Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Three.js library for 3D rendering -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Tone.js for sound effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
-    <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- GSAP for advanced animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-900 text-gray-100">
 
-    <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
         <p class="text-lg neon-text">Loading Experience...</p>
     </div>
 
-    <!-- Background Effects -->
     <div class="aura"></div>
     <div class="bubbles-container">
         <div class="bubble"></div>
@@ -45,23 +33,19 @@
     </div>
     <canvas id="hero-3d-canvas"></canvas>
 
-    <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
     <div class="cursor-follower"></div>
 
-    <!-- Mute Button -->
     <button id="mute-button" class="magnetic-item">
         <svg id="mute-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
-            <!-- Mute/Unmute paths will be injected by JS -->
-        </svg>
+            </svg>
     </button>
 
-    <!-- Floating Navbar -->
     <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 md:px-16 transition-all duration-300 glass-effect">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#hero" class="text-2xl font-bold neon-text magnetic-item"><img src="Icon/Logo.png" alt="Logo"
-                    class="inline-block h-8 w-8"></a>
+                    class="inline-block h-8 w-8" loading="lazy"></a>
             <ul class="hidden md:flex items-center space-x-8">
                 <li><a href="#about" class="hover:text-teal-300 transition-colors duration-300 magnetic-item">About</a>
                 </li>
@@ -73,9 +57,9 @@
                         class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Experience</a></li>
                 <li><a href="#projects"
                         class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Projects</a></li>
-
                 <li><a href="#certifications"
-                        class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Certifications</a></li>
+                        class="hover:text-teal-300 transition-colors duration-300 magnetic-item">Certifications</a>
+                </li>
                 <li><a href="#contact" class="btn-primary text-sm magnetic-item">Contact</a></li>
             </ul>
             <div class="md:hidden">
@@ -90,7 +74,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Panel -->
     <div id="mobile-menu" class="pt-24 px-8">
         <ul class="flex flex-col items-center space-y-8">
             <li><a href="#about"
@@ -104,7 +87,6 @@
             </li>
             <li><a href="#projects"
                     class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Projects</a></li>
-
             <li><a href="#certifications"
                     class="text-xl hover:text-teal-300 transition-colors duration-300 mobile-nav-link">Certifications</a>
             </li>
@@ -112,9 +94,7 @@
         </ul>
     </div>
 
-    <!-- Main content container -->
     <main class="relative z-10">
-        <!-- Hero Section -->
         <section id="hero" class="relative flex flex-col items-center justify-center min-h-screen text-center p-4">
             <div id="hero-content">
                 <h1 id="name"
@@ -132,13 +112,12 @@
             </a>
         </section>
 
-        <!-- About Me Section -->
         <section id="about" class="py-20 px-4 sm:px-8 max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">About Me</h2>
             <div class="flex flex-col md:flex-row items-start md:space-x-12 space-y-8 md:space-y-0">
                 <div class="md:w-1/3 flex-shrink-0 flex flex-col items-center text-center">
                     <img src="images/Profile pic.png" alt="Shivam Rai"
-                        class="w-full h-auto mx-auto rounded-lg border-4 border-purple-500 shadow-lg">
+                        class="w-full h-auto mx-auto rounded-lg border-4 border-purple-500 shadow-lg" loading="lazy">
                     <div class="flex flex-col items-start justify-center space-y-4 mt-8 w-full px-4">
                         <div class="flex items-center space-x-4 text-gray-300"><i
                                 class="fas fa-map-marker-alt text-lg text-primary-neon w-5 text-center"></i>
@@ -194,39 +173,37 @@
             </div>
         </section>
 
-        <!-- Skills & Tools Section -->
         <section id="skills" class="py-20 px-4 sm:px-8 max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-12 neon-text">Skills & Tools</h2>
             <div class="flex flex-wrap justify-center items-center gap-8">
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/figma-icon.svg" alt="Figma"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/adobe-illustrator-cc-3.svg"
-                        alt="Illustrator" class="skill-icon h-16 w-16"></div>
+                        alt="Illustrator" class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/adobe-xd-1.svg" alt="Adobe XD"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/FIgjam.png" alt="Fig Jam"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/html-1.svg" alt="HTML5"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/CSS3.svg" alt="CSS3"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/JavaScript.png" alt="JavaScript"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/notion-2.png" alt="Notion"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/Unity1.png" alt="Unity"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/word-1.svg" alt="MS-word"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/powerpoint-2.svg" alt="PowerPoint"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
                 <div class="skill-icon-container p-4 rounded-lg"><img src="Icon/Miro.png" alt="Miro"
-                        class="skill-icon h-16 w-16"></div>
+                        class="skill-icon h-16 w-16" loading="lazy"></div>
             </div>
         </section>
 
 
-        <!-- NEW: My Process Section -->
         <section id="process" class="py-20 px-4 sm:px-8 max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16 neon-text">My Design Process</h2>
             <div class="relative">
@@ -261,7 +238,6 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="py-20 px-4 sm:px-8 max-w-6xl mx-auto relative">
             <div id="timeline-spotlight"></div>
             <h2 class="text-4xl font-bold text-center mb-16 neon-text">My Journey</h2>
@@ -302,7 +278,6 @@
             </div>
         </section>
 
-        <!-- UPDATED: Graphic Design Work -->
         <section id="graphic-design" class="py-20 w-full overflow-hidden">
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">Graphic Design Work</h2>
             <div class="scroller">
@@ -310,117 +285,122 @@
                     <div class="scroller__inner">
                         <div class="project-card">
                             <a href="Design Work/Mockup (1).png" target="_blank">
-                                <img src="Design Work/Mockup (1).png" alt="Design 1">
+                                <img src="Design Work/Mockup (1).png" alt="Design 1" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Mockup (2).png" target="_blank">
-                                <img src="Design Work/Mockup (2).png" alt="Design 2">
+                                <img src="Design Work/Mockup (2).png" alt="Design 2" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Mockup (3).png" target="_blank">
-                                <img src="Design Work/Mockup (3).png" alt="Design 3">
+                                <img src="Design Work/Mockup (3).png" alt="Design 3" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Mockup (4).png" target="_blank">
-                                <img src="Design Work/Mockup (4).png" alt="Design 4">
+                                <img src="Design Work/Mockup (4).png" alt="Design 4" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (15).png" target="_blank">
-                                <img src="Design Work/Design (15).png" alt="Design 5">
+                                <img src="Design Work/Design (15).png" alt="Design 5" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (16).png" target="_blank">
-                                <img src="Design Work/Design (16).png" alt="Design 6">
+                                <img src="Design Work/Design (16).png" alt="Design 6" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (1).png" target="_blank">
-                                <img src="Design Work/Design (1).png" alt="Design 7">
+                                <img src="Design Work/Design (1).png" alt="Design 7" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (2).png" target="_blank">
-                                <img src="Design Work/Design (2).png" alt="Design 8">
+                                <img src="Design Work/Design (2).png" alt="Design 8" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (3).png" target="_blank">
-                                <img src="Design Work/Design (3).png" alt="Design 9">
+                                <img src="Design Work/Design (3).png" alt="Design 9" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (4).png" target="_blank">
-                                <img src="Design Work/Design (4).png" alt="Design 10">
+                                <img src="Design Work/Design (4).png" alt="Design 10" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (5).png" target="_blank">
-                                <img src="Design Work/Design (5).png" alt="Design 11">
+                                <img src="Design Work/Design (5).png" alt="Design 11" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (17).png" target="_blank">
-                                <img src="Design Work/Design (17).png" alt="Design 12">
+                                <img src="Design Work/Design (17).png" alt="Design 12" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (18).png" target="_blank">
-                                <img src="Design Work/Design (18).png" alt="Design 13">
+                                <img src="Design Work/Design (18).png" alt="Design 13" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (19).png" target="_blank">
-                                <img src="Design Work/Design (19).png" alt="Design 14">
+                                <img src="Design Work/Design (19).png" alt="Design 14" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (20).png" target="_blank">
-                                <img src="Design Work/Design (20).png" alt="Design 15">
+                                <img src="Design Work/Design (20).png" alt="Design 15" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (21).png" target="_blank">
-                                <img src="Design Work/Design (21).png" alt="Design 16">
+                                <img src="Design Work/Design (21).png" alt="Design 16" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (11).png" target="_blank">
-                                <img src="Design Work/Design (11).png" alt="Design 17">
+                                <img src="Design Work/Design (11).png" alt="Design 17" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (12).png" target="_blank">
-                                <img src="Design Work/Design (12).png" alt="Design 18">
+                                <img src="Design Work/Design (12).png" alt="Design 18" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (13).png" target="_blank">
-                                <img src="Design Work/Design (13).png" alt="Design 19">
+                                <img src="Design Work/Design (13).png" alt="Design 19" loading="lazy">
                             </a>
                         </div>
                         <div class="project-card">
                             <a href="Design Work/Design (14).png" target="_blank">
-                                <img src="Design Work/Design (14).png" alt="Design 20">
+                                <img src="Design Work/Design (14).png" alt="Design 20" loading="lazy">
                             </a>
                         </div>
 
                     </div>
+                </div>
+            </div>
+            <div class="text-center mt-20">
+                <a href="https://www.figma.com/@RaiShivu" target="_blank" class="btn-primary magnetic-item">View all on
+                    Figma</a>
+            </div>
+
         </section>
 
-        <!-- Case Studies Section (UPDATED) -->
         <section id="case-studies" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">UX Case Studies</h2>
-            <!-- Use flexbox to center the two cards without a third column -->
             <div class="case-studies-container">
                 <div class="interactive-card rounded-lg flex-1 min-w-[300px] max-w-lg">
                     <div class="card-content rounded-md overflow-hidden flex flex-col h-full">
                         <div class="relative aspect-video"><img src="images/Case Study 2.png" alt="IRCTC Redesign"
-                                class="w-full h-full object-cover"><video class="project-preview" autoplay loop muted>
+                                class="w-full h-full object-cover" loading="lazy"><video class="project-preview" autoplay loop muted>
                                 <source src="https://cdn.pixabay.com/video/2016/09/16/5472-181519782_large.mp4"
                                     type="video/mp4">
                             </video></div>
@@ -440,7 +420,7 @@
                 <div class="interactive-card rounded-lg flex-1 min-w-[300px] max-w-lg">
                     <div class="card-content rounded-md overflow-hidden flex flex-col h-full">
                         <div class="relative aspect-video"><img src="images/Project 201.png" alt="Artisans Marketplace"
-                                class="w-full h-full object-cover"><video class="project-preview" autoplay loop muted>
+                                class="w-full h-full object-cover" loading="lazy"><video class="project-preview" autoplay loop muted>
                                 <source src="https://cdn.pixabay.com/video/2022/10/26/137682-763467652_large.mp4"
                                     type="video/mp4">
                             </video></div>
@@ -460,28 +440,27 @@
             </div>
         </section>
 
-        <!-- UPDATED: Projects Section -->
-        <section id="graphic-design" class="py-20 w-full overflow-hidden">
+        <section id="projects" class="py-20 w-full overflow-hidden">
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">Featured Projects</h2>
             <div class="scroller">
 
                 <div class="scroller__inner">
                     <div class="project-card"><img src="images/Project 101.png"
-                            alt="Public Transport QR Recharge Prototype">
+                            alt="Public Transport QR Recharge Prototype" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">Public Transport QR Recharge Prototype</h3><a
                                 href="https://www.figma.com/proto/1U5gCR2wsSBPtWuWRdjvZ9/Public-Transport-QR-Recharge-Prototype--Community-?node-id=4-3&t=OF7E9EYcMfW7mobW-1"
                                 class="btn-secondary text-sm mt-4" target="_blank">View Project</a>
                         </div>
                     </div>
-                    <div class="project-card"><img src="images/Project 202.png" alt="Local Artisans Marketplace">
+                    <div class="project-card"><img src="images/Project 202.png" alt="Local Artisans Marketplace" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">Local Artisans Marketplace</h3><a
                                 href="https://www.figma.com/design/U6NV6uZX14Smyh7NtwXgIf/Artisans-Website-2.0V?node-id=0-1&t=4R5OV4qccMsMlMbK-1"
                                 target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
                         </div>
                     </div>
-                    <div class="project-card"><img src="images/Project 301.jpg" alt="IRCTC-Re-Design">
+                    <div class="project-card"><img src="images/Project 301.jpg" alt="IRCTC-Re-Design" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">IRCTC-Re-Design</h3><a
                                 href="https://www.figma.com/proto/RhmiIl6S2sDL3PsatrJUqr/IRCTC-Re-Design?page-id=55%3A341&node-id=2020-824&p=f&viewport=526%2C407%2C0.18&t=p03ifK2dTUl6Zzmc-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2020%3A824"
@@ -489,7 +468,7 @@
                         </div>
                     </div>
                     <div class="project-card"><img src="images/Project 401.png"
-                            alt="Visual UI Exploration — Glassmorphism Design">
+                            alt="Visual UI Exploration — Glassmorphism Design" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">Visual UI Exploration — Glassmorphism Design</h3><a
                                 href="https://www.behance.net/gallery/194594563/Glassmorphism-Designs" target="_blank"
@@ -497,42 +476,42 @@
                         </div>
                     </div>
                     <div class="project-card"><img src="images/Project 501.jpg"
-                            alt="Web App - Preventive Maintenance Company">
+                            alt="Web App - Preventive Maintenance Company" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">SaaS Analytics Dashboard</h3><a
                                 href="https://www.figma.com/design/pXz9EsVvjUWoo2Ezz5LHVU/Webapp---Preventive-Maintenance-Company?node-id=46-8020&t=tbB5jAKrXT5gKDtT-1"
                                 target="_blank" class="btn-secondary text-sm mt-4">View Case Study</a>
                         </div>
                     </div>
-                    <div class="project-card"><img src="images/Project 601.png" alt="Parallex Effect Game Website">
+                    <div class="project-card"><img src="images/Project 601.png" alt="Parallex Effect Game Website" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">Parallex Effect Game Website</h3><a
                                 href="https://www.figma.com/design/U14IZDOTuFpXlWt7z3Jwwc/Parallex-Effect-Game-Website?node-id=0-1&t=tZVdUgwohcnXzfKl-1"
                                 target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
                         </div>
                     </div>
-                    <div class="project-card"><img src="images/Project701.png" alt="Next-Gen AI Voice Assistant UI">
+                    <div class="project-card"><img src="images/Project701.png" alt="Next-Gen AI Voice Assistant UI" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">Next-Gen AI Voice Assistant UI</h3><a
                                 href="https://www.figma.com/proto/99uTlhVgvECFrOJr4KssXj/Voice-Assistance?page-id=0%3A1&node-id=70-130&viewport=1561%2C-3039%2C0.98&t=6u0v0dIF7r57wSGJ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A100"
                                 target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
                         </div>
                     </div>
-                    <div class="project-card"><img src="images/Project 801.png" alt="Dating App Onboarding Screen">
+                    <div class="project-card"><img src="images/Project 801.png" alt="Dating App Onboarding Screen" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">Dating App Onboarding Screen</h3><a
                                 href="https://www.figma.com/proto/kSJo9xHK2beJz9t7F0fUBw/Onboarding-Process?page-id=60%3A1129&node-id=60-1681&p=f&viewport=21%2C236%2C0.21&t=HBNaxQCbs9EiqHG3-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=60%3A1681"
                                 target="_blank" class="btn-secondary text-sm mt-4">View Project</a>
                         </div>
                     </div>
-                    <div class="project-card"><img src="images/Project 901.png" alt="Rockstar Redesign">
+                    <div class="project-card"><img src="images/Project 901.png" alt="Rockstar Redesign" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">Rocstar Website Redesign</h3><a
                                 href="https://www.behance.net/gallery/194959005/Rockstar-Games-Website-Re-Design"
                                 target="_blank" class="btn-secondary text-sm mt-4">View Case Study</a>
                         </div>
                     </div>
-                    <div class="project-card"><img src="images/Project 100.png" alt="JOG Website Redesign">
+                    <div class="project-card"><img src="images/Project 100.png" alt="JOG Website Redesign" loading="lazy">
                         <div class="project-card-content">
                             <h3 class="text-2xl font-bold">JOG Website Redesign</h3><a
                                 href="https://www.behance.net/gallery/233016517/JOG-Sportswear-A-Modern-E-commerce-UXUI-Redesign"
@@ -553,14 +532,13 @@
 
 
 
-        <!-- Certifications Section -->
         <section id="certifications" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">Certifications</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                 <div class="interactive-card p-1 rounded-lg">
                     <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
                             src="Certificates/Google UX Design Certificate.jpg" alt="Google UX Design Certificate"
-                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                            class="w-full h-48 object-cover cursor-pointer cert-image" loading="lazy">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold">Google UX Design Professional</h3>
                             <p class="text-gray-400 mt-2 mb-4">Issued by Google</p><button
@@ -572,7 +550,7 @@
                 <div class="interactive-card p-1 rounded-lg">
                     <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
                             src="Certificates/Udemy_Certificate.png" alt="Web & Mobile Designer Certificate"
-                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                            class="w-full h-48 object-cover cursor-pointer cert-image" loading="lazy">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold">Complete Web & Mobile Designer</h3>
                             <p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button
@@ -584,7 +562,7 @@
                 <div class="interactive-card p-1 rounded-lg">
                     <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
                             src="Certificates/MTF_Certificate.jpeg" alt="MTF Certificate"
-                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                            class="w-full h-48 object-cover cursor-pointer cert-image" loading="lazy">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold">UX Design Professional Certificate</h3>
                             <p class="text-gray-400 mt-2 mb-4">Issued by Institute of Management, Technology & Finance
@@ -596,7 +574,7 @@
                 <div class="interactive-card p-1 rounded-lg">
                     <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
                             src="Certificates/Udemy_Certificate02.jpg" alt="UX Design Essentials - Adobe XD Certificate"
-                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                            class="w-full h-48 object-cover cursor-pointer cert-image" loading="lazy">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold">User Experience Design Essentials - Adobe XD</h3>
                             <p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button
@@ -608,7 +586,7 @@
                 <div class="interactive-card p-1 rounded-lg">
                     <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
                             src="Certificates/Accenture_Certification.png" alt="Accenture_Certification"
-                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                            class="w-full h-48 object-cover cursor-pointer cert-image" loading="lazy">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold">Digital Skills: User Experience</h3>
                             <p class="text-gray-400 mt-2 mb-4">Issued by Accenture</p><button
@@ -620,7 +598,7 @@
                 <div class="interactive-card p-1 rounded-lg">
                     <div class="card-content rounded-md flex flex-col text-center h-full overflow-hidden"><img
                             src="Certificates/Udemy_Certificate03.png" alt="Accessibility Certificate"
-                            class="w-full h-48 object-cover cursor-pointer cert-image">
+                            class="w-full h-48 object-cover cursor-pointer cert-image" loading="lazy">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold">Design for Accessibility (WCAG 2.2)</h3>
                             <p class="text-gray-400 mt-2 mb-4">Issued by Udemy</p><button
@@ -636,38 +614,35 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
         <section id="testimonials" class="py-20 px-4 sm:px-8 max-w-6xl mx-auto overflow-hidden relative">
             <h2 class="text-4xl font-bold text-center mb-12 neon-text">What Others Say</h2>
             <div id="testimonial-carousel-container">
                 <div class="testimonial-slide">
                     <img src="https://placehold.co/100x100/1E1E2C/9F7AEA?text=Client+1" alt="Client 1"
-                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
+                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon" loading="lazy">
                     <p class="text-xl italic text-gray-300">"Shivam's creativity and dedication are unmatched. He
                         delivered a product that exceeded all our expectations."</p>
                     <p class="mt-4 font-bold text-lg">- Priya Sharma, Project Manager</p>
                 </div>
                 <div class="testimonial-slide">
                     <img src="https://placehold.co/100x100/1E1E2C/38B2AC?text=Client+2" alt="Client 2"
-                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
+                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon" loading="lazy">
                     <p class="text-xl italic text-gray-300">"Working with Shivam was a breeze. He's a great communicator
                         and truly understands user-centric design."</p>
                     <p class="mt-4 font-bold text-lg">- Rohan Verma, Startup Founder</p>
                 </div>
                 <div class="testimonial-slide">
                     <img src="https://placehold.co/100x100/1E1E2C/FFFFFF?text=Client+3" alt="Client 3"
-                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon">
+                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-neon" loading="lazy">
                     <p class="text-xl italic text-gray-300">"His passion for gaming UX really shines through. The
                         insights he brought to our project were invaluable."</p>
                     <p class="mt-4 font-bold text-lg">- Anjali Singh, Lead Developer</p>
                 </div>
             </div>
-            <!-- NEW: Carousel Navigation -->
             <button id="prev-slide" class="carousel-nav magnetic-item">&lt;</button>
             <button id="next-slide" class="carousel-nav magnetic-item">&gt;</button>
         </section>
 
-        <!-- Footer / Contact Section -->
         <footer id="contact" class="pt-20 px-4 sm:px-8 text-center">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-5xl font-bold mb-4">Get In Touch</h2>
@@ -706,13 +681,16 @@
         </footer>
     </main>
 
-    <!-- Certificate Modal -->
     <div id="cert-modal">
         <span id="close-modal">&times;</span>
         <img id="modal-image" src="" alt="Certificate Preview">
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
 
 </body>
 
